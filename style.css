@@ -1,0 +1,91 @@
+body {
+    background-color: rgb(116, 153, 191);
+    display: flex;
+    flex-direction: column; /* Stack header, content, and footer vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    height: 100vh; /* Make the body take up the full viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+.left-header {
+    position: absolute; /* Allow free positioning */
+    top: 50px; /* Push the header down slightly from the top */
+    left: 80px; /* Align to the left side of the viewport */
+    display: flex; /* Arrange the images in a row */
+    transform: scale(4.5); /* Enlarge the left section */
+}
+
+.right-header {
+    position: absolute; /* Allow free positioning */
+    top: 30px; /* Push the header down slightly from the top */
+    right: 50px; /* Align to the right of the viewport */
+    display: flex;
+    gap: 10px; /* Add spacing between icons */
+}
+
+header img {
+    width: 50px; /* Set a fixed width for the icons */
+    height: 50px; /* Set a fixed height for the icons */
+    object-fit: contain; /* Ensure images scale correctly */
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    align-items: center; /* Center align the images */
+}
+
+.image-container img {
+    width: 430px; /* Default size for images */
+    height: 380px; /* Default size for images */
+}
+
+.image-container img:nth-child(2) {
+    width: 450px; /* Larger width for Rex image */
+    height: 250px; /* Larger height for Rex image */
+}
+
+
+/* Scroll button styles */
+.scroll-button {
+    position: fixed; /* Keep the buttons fixed on the screen */
+    right: 20px; /* Position to the right side */
+    background: linear-gradient(145deg, #4e92f1, #3b70b7); /* Gradient background for a modern look */
+    color: white;
+    font-size: 24px;
+    border: none;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 50%; /* Round button */
+    transition: all 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    width: 70px; /* Width of the button */
+    height: 70px; /* Height of the button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-button:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Enhance the shadow */
+}
+
+#scroll-up {
+    top: 50%; /* Vertically centered */
+    transform: translateY(-50%); /* Center the button */
+}
+
+#scroll-down {
+    top: 60%; /* Place the down button below the up button */
+    transform: translateY(-50%); /* Center the button */
+}
+
