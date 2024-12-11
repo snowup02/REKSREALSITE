@@ -1,91 +1,84 @@
 body {
-    background-color: rgb(116, 153, 191);
-    display: flex;
-    flex-direction: column; /* Stack header, content, and footer vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    height: 100vh; /* Make the body take up the full viewport height */
-    margin: 0; /* Remove default margin */
+    background-color: grey;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background:
+      radial-gradient(circle farthest-side at 0% 50%,#85889d 23.5%,#0000 0)71.4px 102px,
+      radial-gradient(circle farthest-side at 0% 50%,#000000 24%,#0000 0)64.6px 102px,
+      linear-gradient(#85889d 14%,#0000 0, #0000 85%,#85889d 0)0 0,
+      linear-gradient(150deg,#85889d 24%,#000000 0,#000000 26%,#0000 0,#0000 74%,#000000 0,#000000 76%,#85889d 0)0 0,
+      linear-gradient(30deg,#85889d 24%,#000000 0,#000000 26%,#0000 0,#0000 74%,#000000 0,#000000 76%,#85889d 0)0 0,
+      linear-gradient(90deg,#000000 2%,#85889d 0,#85889d 98%,#000000 0%)0 0 #85889d;
+background-size: 136px 204px;
+background-color: #85889d;
+    height: 1200px;
+    position: relative;
 }
 
 .left-header {
-    position: absolute; /* Allow free positioning */
-    top: 50px; /* Push the header down slightly from the top */
-    left: 80px; /* Align to the left side of the viewport */
-    display: flex; /* Arrange the images in a row */
-    transform: scale(4.5); /* Enlarge the left section */
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.left-header img {
+    width: 350px;
+    height: 250px;
 }
 
 .right-header {
-    position: absolute; /* Allow free positioning */
-    top: 30px; /* Push the header down slightly from the top */
-    right: 50px; /* Align to the right of the viewport */
+    position: absolute;
+    top: 60px;
+    right: 60px;
     display: flex;
-    gap: 10px; /* Add spacing between icons */
+    gap: 10px;
 }
 
-header img {
-    width: 50px; /* Set a fixed width for the icons */
-    height: 50px; /* Set a fixed height for the icons */
-    object-fit: contain; /* Ensure images scale correctly */
+.right-header img {
+    width: 79px;
+    height: 79px;
 }
 
-.content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.image-container {
+.center-header {
+    position: absolute;
+    top: 40%; /* Center vertically */
+    left: 49%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for perfect centering */
     display: flex;
     flex-direction: column; /* Stack images vertically */
-    align-items: center; /* Center align the images */
+    align-items: center; /* Center align horizontally */
 }
 
-.image-container img {
-    width: 430px; /* Default size for images */
-    height: 380px; /* Default size for images */
+.center-header img {
+    width: 700px;
+    height: 600px;
 }
 
-.image-container img:nth-child(2) {
-    width: 450px; /* Larger width for Rex image */
-    height: 250px; /* Larger height for Rex image */
-}
-
-
-/* Scroll button styles */
-.scroll-button {
-    position: fixed; /* Keep the buttons fixed on the screen */
-    right: 20px; /* Position to the right side */
-    background: linear-gradient(145deg, #4e92f1, #3b70b7); /* Gradient background for a modern look */
-    color: white;
-    font-size: 24px;
-    border: none;
-    padding: 20px;
-    margin: 10px;
-    cursor: pointer;
-    border-radius: 50%; /* Round button */
-    transition: all 0.3s ease; /* Smooth transition */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    width: 70px; /* Width of the button */
-    height: 70px; /* Height of the button */
+.center-header-bottom {
+    position: absolute;
+    top: 75%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for perfect centering */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Stack images vertically */
+    align-items: center; /* Center align horizontally */
+}
+.center-header-bottom img{
+    width: 900px;
+    height: 400px;
 }
 
-.scroll-button:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Enhance the shadow */
+section {
+    background-color: rgb(65, 108, 161);
+    color: black;
+    height: 300px;
 }
 
-#scroll-up {
-    top: 50%; /* Vertically centered */
-    transform: translateY(-50%); /* Center the button */
+footer {
+    background-color: white;
+    color: black;
+    height: 200px;
 }
-
-#scroll-down {
-    top: 60%; /* Place the down button below the up button */
-    transform: translateY(-50%); /* Center the button */
-}
-
