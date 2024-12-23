@@ -186,6 +186,12 @@
 
 
 
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 0.875rem; /* Slightly smaller text on mobile */
+    }
+}
+
 
 
 @media screen and (max-width: 5040px) {
