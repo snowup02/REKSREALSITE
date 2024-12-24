@@ -142,6 +142,116 @@ body {
     left: 130px;
 }
 
+
+.windmill img {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    top: 170px;
+    right: 150px;
+}
+
+@media screen and (max-width: 1200px) {
+    .windmill img {
+        display: none;
+    }
+}
+@media screen and (max-height: 630px) {
+    .windmill img {
+        display: none;
+    }
+}
+
+.grass img {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 700px;
+    right: 300px;
+}
+@media screen and (max-width: 1200px){
+    .grass img {
+        display: none;
+    }
+}
+@media screen and (max-height: 620px){
+    .grass img {
+        display: none;
+    }
+}
+
+.grass-2 img {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 700px;
+    right: 180px;
+}
+@media screen and (max-width: 1200px){
+    .grass-2 img {
+        display: none;
+    }
+}
+@media screen and (max-height: 620px){
+    .grass-2 img {
+        display: none;
+    }
+}
+.grass-3 img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 700px;
+    right: 300px;
+
+}
+@media screen and (max-width: 1200px){
+    .gras-3 img {
+        display: none;
+    }
+}
+@media screen and (max-height: 620px){
+    .grass-3 img {
+        display: none;
+    }
+}
+.grass-4 img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 770px;
+    right: 820px;
+
+}
+@media screen and (max-width: 1200px){
+    .grass-4 img {
+        display: none;
+    }
+}
+@media screen and (max-height: 620px){
+    .grass-4 img {
+        display: none;
+    }
+}
+.grass-5 img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 790px;
+    left: 2px;
+}
+@media screen and (max-width: 1200px){
+    .grass-5 img {
+        display: none;
+    }
+}
+@media screen and (max-height: 620px){
+    .grass-5 img {
+        display: none;
+    }
+}
+
+
 .modal {
     display: none; /* Hide the modal initially */
     position: fixed; 
