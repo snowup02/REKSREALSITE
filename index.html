@@ -10,7 +10,22 @@
 
     <div class="background-image"></div>
 
-   
+
+
+
+    <div class="clickable-area" onclick="openModal('You clicked me!')"></div>
+    <div class="clickable-area-2" onclick="openModal('You clicked me!')"></div>
+    <div class="clickable-area-3" onclick="openModal('You clicked me!')"></div>
+    <div class="clickable-area-4" onclick="openModal('You clicked me!')"></div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">x</span>
+            <h2 id="modal-title"></h2>
+        </div>
+    </div>
+
 
     <div class="top-right-socials">
         <a><img src="images/soccii.gif" alt=""></a>
@@ -27,109 +42,45 @@
     <div class="top-right-tg">
         <a><img src="images/tele.png" alt=""></a>
     </div>
-    
-
-
-    
-    <div class="center">
-        <img src="images/REKS FIRE.png" alt="">
-    </div>
-    
-    <div class="center-fish">
-        <img src="images/REKS FISH.png" alt="">
-    </div>
-    
-    <div class="center-sign">
-        <img src="images/REKS SIGN.png" alt="">
-    </div>
-    
-    
-    <div class="center-rex">
-        <img src="images/REKSfishingWITHRING - Copy.png" alt="">
-    </div>
-
-    <div class="modal">
-        <div class="modal-content">
-            <button class="close-btn">X</button>
-            <p>You clicked me!</p>
-        </div>
-    </div>
-
     <div class="smoke">
         <img src="images/smoke.gif" alt="">
     </div>
 
-    <div class="windmill">
-        <img src="images/mill.gif" alt="">
-    </div>
-
-    <div class="grass">
-        <img src="images/grass.gif" alt="">
-    </div>
-    <div class="grass-2">
-        <img src="images/grass.gif" alt="">
-    </div>
-    <div class="grass-3">
-        <img src="images/grass.gif" alt="">
-    </div>
-    <div class="grass-4">
-        <img src="images/grass.gif" alt="">
-    </div>
-    <div class="grass-5">
-        <img src="images/grass.gif" alt="">
-    </div>
+    
     
 
     <script>
+        
+
+        // Function to open modal with specific content
+function openModal(title) {
+    const modal = document.getElementById('modal');
+    const modalTitle = document.getElementById('modal-title');
+    
+    // Set the title of the modal
+    modalTitle.textContent = title;
+    
+    // Show the modal
+    modal.style.display = 'flex';
+}
+
+// Function to close the modal
+function closeModal() {
+    const modal = document.getElementById('modal');
+    modal.style.display = 'none';
+}
+
+// Close modal when clicking outside the modal content
+window.onclick = function(event) {
+    const modal = document.getElementById('modal');
+    if (event.target === modal) {
+        closeModal();
+    }
+};
 
 
-        // Ensure the modal is hidden when the page first loads
-        document.addEventListener('DOMContentLoaded', () => {
-            const modal = document.querySelector('.modal');
-            modal.style.display = 'none';  // Ensure modal is hidden initially
-        });
-        
-        const centerImage = document.querySelector('.center');
-        const centerFishImage = document.querySelector('.center-fish');
-        const centerSignImage = document.querySelector('.center-sign');
-        const centerRexImage = document.querySelector('.center-rex');
-        const modal = document.querySelector('.modal');
-        const closeBtn = document.querySelector('.close-btn');
-        
-        // Add a click event listener to the center image
-        centerImage.addEventListener('click', () => {
-            modal.style.display = 'flex';  // Show modal when image clicked
-        });
-        
-        // Add a click event listener to the center-fish image
-        centerFishImage.addEventListener('click', () => {
-            modal.style.display = 'flex';  // Show modal when fish image clicked
-        });
-        
-        // Add a click event listener to the center-sign image
-        centerSignImage.addEventListener('click', () => {
-            modal.style.display = 'flex';  // Show modal when sign image clicked
-        });
-        
-        // Add a click event listener to the center-rex image
-        centerRexImage.addEventListener('click', () => {
-            modal.style.display = 'flex';  // Show modal when rex image clicked
-        });
-        
-        // Close the modal when clicking anywhere on the background
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none';  // Close modal when clicking outside the content
-            }
-        });
-        
-        // Close the modal when clicking the close button
-        closeBtn.addEventListener('click', (e) => {
-            e.stopPropagation();  // Prevent event bubbling
-            modal.style.display = 'none';  // Close modal when the close button is clicked
-        });
-        
-        </script>
+    
+    </script>
         
 
 
