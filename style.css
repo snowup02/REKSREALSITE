@@ -12,11 +12,101 @@ body {
 .background-image {
     width: 100%;
     height: 140vh;
-    background-image: url("images/reks\ background\ with\ sign.png");
+    background-image: url("images/FishingREKSwithfont3.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.clickable-area {
+    position: absolute;
+    top: 530px; /* Adjust based on your layout */
+    left: 40px; /* Adjust based on your layout */
+    width: 250px; /* Width of the clickable area */
+    height: 120px; /* Height of the clickable area */
+    border-radius: 100px;
+    cursor: pointer;
+}
+.clickable-area-2 {
+    position: absolute;
+    top: 660px; /* Adjust based on your layout */
+    left: 55px; /* Adjust based on your layout */
+    width: 250px; /* Width of the clickable area */
+    height: 220px; /* Height of the clickable area */
+    border-radius: 50px;
+    cursor: pointer;
+    
+}
+.clickable-area-3 {
+    position: absolute;
+    top: 440px; /* Adjust based on your layout */
+    left: 475px; /* Adjust based on your layout */
+    width: 300px; /* Width of the clickable area */
+    height: 450px; /* Height of the clickable area */
+    border-radius: 100px;
+    cursor: pointer;
+}
+.clickable-area-4 {
+    position: absolute;
+    top: 480px; /* Adjust based on your layout */
+    right: 10px; /* Adjust based on your layout */
+    width: 270px; /* Width of the clickable area */
+    height: 400px; /* Height of the clickable area */
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+
+
+.clickable-area:hover, .clickable-area-2:hover, .clickable-area-3:hover, .clickable-area-4:hover {
+    
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Modal content box */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+    position: relative; /* Needed for absolute positioning of close button */
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    background: transparent;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
 
 .top-right-socials {
     position: absolute;
@@ -24,16 +114,8 @@ body {
     right: 100px;
     display: flex;
 }
-@media screen and (max-width: 1200px) {
-    .top-right-socials {
-        display: none;
-    }
-}
-@media screen and (max-height: 600px) {
-    .top-right-socials {
-        display: none;
-    }
-}
+
+
 .top-right-socials img {
     width: 200px;
     height: 90px;
@@ -43,16 +125,6 @@ body {
     top: 103px;
     right: 350px;
     display: flex
-}
-@media screen and (max-width: 1200px) {
-    .top-right-dc {
-        display: none;
-    }
-}
-@media screen and (max-height: 600px) {
-    .top-right-dc {
-        display: none;
-    }
 }
 .top-right-dc img {
     width: 40px;
@@ -69,17 +141,6 @@ body {
     width: 48px;
     height: 48px;
 }
-@media screen and (max-width: 1200px) {
-    .top-right-x {
-        display: none;
-    }
-}
-@media screen and (max-height: 600px) {
-    .top-right-x {
-        display: none;
-    }
-}
-
 .top-right-tg {
     position: absolute;
     top: 102px;
@@ -90,18 +151,6 @@ body {
     width: 41px;
     height: 41px;
 }
-@media screen and (max-width: 1200px) {
-    .top-right-tg {
-        display: none;
-    }
-}
-@media screen and (max-height: 600px) {
-    .top-right-tg {
-        display: none;
-    }
-}
-
-
 
 
 
@@ -122,821 +171,13 @@ body {
     50% { transform: scale(1.4) rotate(40deg); }/* Midway: scale up and rotate */ 
     100% { transform: scale(1.4) rotate(40deg); }/* End state: scale slightly smaller and reset rotation */
  }
- .center img {
-    border: none;
-    width: 190px;
-    height: 220px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
-    position: absolute;
-    top: 650px;
-    left: 90px;
-}
-
-.center img:hover {
-    transform: scale(1.2); /* Slightly enlarge the image */
-    cursor: pointer; /* Indicate interactivity */
-}
-
-.center-fish img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
-    position: absolute;
-    top: 557px;
-    left: 105px;
-    width: 190px;
-    height: 80px;
-}
-.center-fish img:hover {
-    transform: scale(1.2); /* Slightly enlarge the image */
-    cursor: pointer; /* Indicate interactivity */
-}
-.center-sign img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
-    position: absolute;
-    top: 490px;
-    right: 40px;
-    width: 260px;
-    height: 350px;  
-}
-.center-sign img:hover {
-    transform: scale(1.1); /* Slightly enlarge the image */
-    cursor: pointer; /* Indicate interactivity */
-}
-.center-rex img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
-    position: absolute;
-    top: 520px;
-    left: 460px;
-    width: 420px;
-    height: 390px;
-}
-.center-rex img:hover {
-    border: none;
-    transform: scale(1.1); /* Slightly enlarge the image */
-    cursor: pointer; /* Indicate interactivity */
-}
 .smoke img {
     width: 150;
     height: 160px;
     position: absolute;
-    top: 415px;
+    top: 400px;
     left: 130px;
 }
-
-
-.windmill img {
-    position: absolute;
-    width: 130px;
-    height: 130px;
-    top: 170px;
-    right: 150px;
-}
-
-@media screen and (max-width: 1200px) {
-    .windmill img {
-        display: none;
-    }
-}
-@media screen and (max-height: 630px) {
-    .windmill img {
-        display: none;
-    }
-}
-
-.grass img {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    top: 700px;
-    right: 300px;
-}
-@media screen and (max-width: 1200px){
-    .grass img {
-        display: none;
-    }
-}
-@media screen and (max-height: 620px){
-    .grass img {
-        display: none;
-    }
-}
-
-.grass-2 img {
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    top: 700px;
-    right: 180px;
-}
-@media screen and (max-width: 1200px){
-    .grass-2 img {
-        display: none;
-    }
-}
-@media screen and (max-height: 620px){
-    .grass-2 img {
-        display: none;
-    }
-}
-.grass-3 img {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: 700px;
-    right: 300px;
-
-}
-@media screen and (max-width: 1200px){
-    .grass-3 img {
-        display: none;
-    }
-}
-@media screen and (max-height: 620px){
-    .grass-3 img {
-        display: none;
-    }
-}
-.grass-4 img {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: 770px;
-    right: 820px;
-
-}
-@media screen and (max-width: 1200px){
-    .grass-4 img {
-        display: none;
-    }
-}
-@media screen and (max-height: 620px){
-    .grass-4 img {
-        display: none;
-    }
-}
-.grass-5 img {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: 790px;
-    left: 2px;
-}
-@media screen and (max-width: 1200px){
-    .grass-5 img {
-        display: none;
-    }
-}
-@media screen and (max-height: 620px){
-    .grass-5 img {
-        display: none;
-    }
-}
-
-
-.modal {
-    display: none; /* Hide the modal initially */
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    display: flex; 
-}
-
-/* Modal content (the large box) */
-.modal-content {
-    background-color: white;
-    padding: 200px 0px 200px 0px;
-    border-radius: 30px;
-    width: 1000px; /* Adjust the width of the box */
-    height: 500px;
-    text-align: center;
-    font-size: 25px;
-    position: relative; /* Needed for positioning the close button */
-}
-/* Close button styles */
-.close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: rgb(173, 27, 27);
-    color: white;
-    border: none;
-    padding: 10px 10px 10px 10px;
-    font-size: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.close-btn:hover {
-    background-color: rgb(7, 7, 7);
-}
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 1000px) {
-    .center-sign img{
-    top: 520px;
-    right: 70px;
-    width: 210px;
-    height: 300px; 
-    }
-}
-@media screen and (max-width: 900px) {
-    .center-sign img{
-    top: 570px;
-    right: 60px;
-    width: 170px;
-    height: 250px; 
-    }
-}
-@media screen and (max-width: 800px) {
-    .center-sign img{
-    top: 600px;
-    right: 40px;
-    width: 120px;
-    height: 200px; 
-    }
-}
-@media screen and (max-width: 750px) {
-    .center-sign img{
-    top: 600px;
-    right: 0px;
-    width: 120px;
-    height: 200px; 
-    }
-}
-@media screen and (max-width: 700px) {
-    .center-sign img{
-    display: none;
-    }
-}
-
-
-
-
-
-
-
-@media screen and (max-height: 500px) {
-    .center-sign img{
-        width: 150px;
-        height: 200px;
-        top: 480px;
-        right: 270px;
-    }
-}
-@media screen and (max-height: 450px) {
-    .center-sign img{
-        width: 100px;
-        height: 150px;
-        top: 480px;
-        right: 360px;
-    }
-}
-@media screen and (max-height: 400px) {
-    .center-sign img{
-        width: 100px;
-        height: 150px;
-        top: 480px;
-        right: 400px;
-    }
-}
-@media screen and (max-height: 350px) {
-    .center-sign img{
-        width: 100px;
-        height: 150px;
-        top: 280px;
-        right: 450px;
-    }
-}
-@media screen and (max-height: 300px) {
-    .center-sign img{
-        display: none;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .center-sign img{
-        width: 70px;
-        height: 100px;
-        top: 170px;
-        right: 180px;
-    }
-}
-@media screen and (max-width: 450px) {
-    .center-sign img{
-        width: 70px;
-        height: 100px;
-        top: 170px;
-        right: 180px;
-    }
-}
-@media screen and (max-width: 400px) {
-    .center-sign img{
-        width: 70px;
-        height: 100px;
-        top: 170px;
-        right: 180px;
-    }
-}
-@media screen and (max-width: 350px) {
-    .center-sign img{
-        width: 70px;
-        height: 100px;
-        top: 170px;
-        right: 180px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-height: 400px) {
-    .center-fish img{
-        width: 150px;
-        height: 70px;
-        top: 150px;
-        left: 570px;
-    }
-}
-@media screen and (max-height: 350px) {
-    .center-fish img{
-        width: 150px;
-        height: 70px;
-        top: 150px;
-        left: 570px;
-    }
-}
-@media screen and (max-height: 300px) {
-    .center-fish img{
-        display: none;
-    }
-}
-
-
-
-
-
-
-
-@media screen and (max-width: 1100px) {
-    .center-fish img{
-    top: 557px;
-    left: 10px;
-    width: 190px;
-    height: 80px;
-    }
-}
-@media screen and (max-width: 1000px) {
-    .center-fish img{
-    top: 557px;
-    left: -40px;
-    width: 190px;
-    height: 80px;
-    }
-}
-@media screen and (max-width: 900px) {
-    .center-fish img{
-    top: 557px;
-    left: -90px;
-    width: 190px;
-    height: 80px;
-    }
-}
-@media screen and (max-width: 800px) {
-    .center-fish img{
-    top: 557px;
-    left: -150px;
-    width: 190px;
-    height: 80px;
-    }
-}
-@media screen and (max-width: 700px) {
-    .center-fish img{
-    top: 557px;
-    left: -200px;
-    width: 190px;
-    height: 80px;
-    }
-}
-@media screen and (max-width: 500px) {
-    .center-fish img{
-        width: 200px;
-        height: 90px;
-        top: 300px;
-        left: 200px;
-    }
-}
-@media screen and (max-width: 450px) {
-    .center-fish img{
-        width: 200px;
-        height: 90px;
-        top: 300px;
-        left: 200px;
-    }
-}
-@media screen and (max-width: 400px) {
-    .center-fish img{
-        width: 200px;
-        height: 90px;
-        top: 300px;
-        left: 200px;
-    }
-}
-@media screen and (max-width: 350px) {
-    .center-fish img{
-        width: 200px;
-        height: 90px;
-        top: 300px;
-        left: 200px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 1100px) {
-    .center img{
-    top: 650px;
-    left: 0px;
-    width: 190px;
-    height: 220px;
-    }
-}
-@media screen and (max-width: 1000px) {
-    .center img{
-    top: 650px;
-    left: -50px;
-    width: 190px;
-    height: 220px;
-    }
-}
-@media screen and (max-width: 900px) {
-    .center img{
-    top: 650px;
-    left: -100px;
-    width: 190px;
-    height: 220px;
-    }
-}
-@media screen and (max-width: 800px) {
-    .center img{
-    top: 650px;
-    left: -150px;
-    width: 190px;
-    height: 220px;
-    }
-}
-@media screen and (max-width: 700px) {
-    .center img{
-    top: 650px;
-    left: -200px;
-    width: 190px;
-    height: 220px;
-    }
-}
-
-
-@media screen and (max-width: 500px) {
-    .center img{
-        width: 130px;
-        height: 130px;
-        top: 400px;
-        left: 200px;
-    }
-}
-@media screen and (max-width: 450px) {
-    .center img{
-        width: 130px;
-        height: 130px;
-        top: 400px;
-        left: 200px;
-    }
-}
-@media screen and (max-width: 400px) {
-    .center img{
-        width: 130px;
-        height: 130px;
-        top: 400px;
-        left: 200px;
-    }
-}
-
-
-
-
-
-
-
-
-@media screen and (max-height: 600px) {
-    .center img {
-        width: 160px;
-        height: 190px;
-        top: 600px;
-        left: 100px;
-    }
-}
-@media screen and (max-height: 550px) {
-    .center img {
-        width: 160px;
-        height: 190px;
-        top: 560px;
-        left: 100px;
-    }
-}
-@media screen and (max-height: 500px) {
-    .center img {
-        width: 130px;
-        height: 160px;
-        top: 540px;
-        left: 120px;
-    }
-}
-@media screen and (max-height: 450px) {
-    .center img {
-        width: 130px;
-        height: 160px;
-        top: 540px;
-        left: 350px;
-    }
-}
-@media screen and (max-height: 400px) {
-    .center img {
-        width: 100px;
-        height: 130px;
-        top: 500px;
-        left: 400px;
-    }
-}
-@media screen and (max-height: 350px) {
-    .center img {
-        width: 100px;
-        height: 130px;
-        top: 230px;
-        left: 580px;
-    }
-}
-@media screen and (max-height: 300px) {
-    .center img {
-        display: none;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-height: 600px) {
-    .center-rex img {
-        top: 460px;
-    }
-}
-@media screen and (max-height: 550px) {
-    .center-rex img {
-        width: 370px;
-        height: 340px;
-        top: 440px;
-    }
-}
-@media screen and (max-height: 500px) {
-    .center-rex img {
-        width: 320px;
-        height: 290px;
-        top: 440px;
-        left: 500px;
-    }
-}
-@media screen and (max-height: 450px) {
-    .center-rex img {
-        width: 270px;
-        height: 240px;
-        top: 450px;
-        left: 520px;
-    }
-}
-@media screen and (max-height: 400px) {
-    .center-rex img {
-        width: 220px;
-        height: 190px;
-        top: 450px;
-        left: 540px;
-    }
-}
-@media screen and (max-height: 350px) {
-    .center-rex img {
-        width: 220px;
-        height: 190px;
-        top: 400px;
-        left: 540px;
-        
-    }
-}
-@media screen and (max-height: 300px) {
-    .center-rex img {
-        display: none;
-        
-    }
-}
-
-
-
-
-
-@media screen and (max-width: 1200px) {
-    .center-rex img {
-        left: 400px;
-    }
-}
-@media screen and (max-width: 1150px) {
-    .center-rex img {
-        left: 350px;
-    }
-}
-@media screen and (max-width: 1100px) {
-    .center-rex img {
-        left: 300px;
-    }
-}
-@media screen and (max-width: 1050px) {
-    .center-rex img {
-        left: 330px;
-        width: 370px;
-        height: 340px;
-    }
-}
-@media screen and (max-width: 1000px) {
-    .center-rex img {
-        left: 300px;
-        width: 370px;
-        height: 340px;
-    }
-}
-@media screen and (max-width: 950px) {
-    .center-rex img {
-        left: 260px;
-        width: 370px;
-        height: 340px;
-    }
-}
-@media screen and (max-width: 900px) {
-    .center-rex img {
-        top: 560px;
-        left: 270px;
-        width: 320px;
-        height: 290px;
-    }
-}
-@media screen and (max-width: 850px) {
-    .center-rex img {
-        top: 560px;
-        left: 250px;
-        width: 320px;
-        height: 290px;
-    }
-}
-@media screen and (max-width: 800px) {
-    .center-rex img {
-        top: 560px;
-        left: 250px;
-        width: 320px;
-        height: 290px;
-    }
-}
-@media screen and (max-width: 750px) {
-    .center-rex img {
-        top: 560px;
-        left: 230px;
-        width: 320px;
-        height: 290px;
-    }
-}
-@media screen and (max-width: 700px) {
-    .center-rex img {
-        top: 560px;
-        left: 200px;
-        width: 320px;
-        height: 290px;
-    }
-}
-@media screen and (max-width: 600px) {
-    .center-rex img {
-        top: 560px;
-        left: 170px;
-        width: 320px;
-        height: 290px;
-    }
-}
-@media screen and (max-width: 550px) {
-    .center-rex img {
-        top: 560px;
-        left: 140px;
-        width: 320px;
-        height: 290px;
-    }
-}
-@media screen and (max-width: 500px) {
-    .center-rex img {
-        top: 560px;
-        left: 140px;
-        width: 320px;
-        height: 290px;
-    }
-}
-@media screen and (max-width: 450px) {
-    .center-rex img {
-        top: 560px;
-        left: 110px;
-        width: 320px;
-        height: 290px;
-    }
-}
-@media screen and (max-width: 400px) {
-    .center-rex img {
-        top: 560px;
-        left: 80px;
-        width: 320px;
-        height: 290px;
-    }
-}
-@media screen and (max-width: 350px) {
-    .center-rex img {
-        top: 560px;
-        left: 80px;
-        width: 150px;
-        height: 110px;
-    }
-}
-@media screen and (max-width: 300px) {
-    .center-rex img {
-        top: 560px;
-        left: 80px;
-        width: 150px;
-        height: 110px;
-    }
-}
-@media screen and (max-width: 290px) {
-    .center-rex img {
-        display: none;
-    }
-}
-
-
 
 
 
